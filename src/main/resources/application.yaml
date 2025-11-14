@@ -1,3 +1,39 @@
+logging:
+  config: classpath:log4j2.xml
+
 spring:
   application:
-    name: demo
+    name: WiseAPI
+
+  profiles:
+    active: prod
+
+  output:
+    ansi:
+      enabled: ALWAYS
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+server:
+  port: 9027
+
+  servlet:
+    context-path: /WiseAPI
+    encoding:
+      charset: UTF-8
+      force: true
+
+  error:
+    include-stacktrace: never
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+server:
+  port: 9017
