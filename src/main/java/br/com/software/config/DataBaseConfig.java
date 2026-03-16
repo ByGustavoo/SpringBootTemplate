@@ -1,4 +1,4 @@
-package br.com.wise.config;
+package br.com.software.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.jdbc.DataSourceBuilder;

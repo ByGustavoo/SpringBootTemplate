@@ -1,32 +1,31 @@
 logging:
   config: classpath:log4j2.xml
 
+server:
+  servlet:
+    context-path: /SpringBootTemplate
+
 spring:
   application:
-    name: WiseAPI
-
-  profiles:
-    active: prod
-
-  output:
-    ansi:
-      enabled: ALWAYS
-
-  flyway:
-    enabled: true
-    baseline-on-migrate: true
-
-server:
-  port: 9027
+    name: springbootemplate
 
   servlet:
-    context-path: /WiseAPI
     encoding:
       charset: UTF-8
       force: true
 
-  error:
-    include-stacktrace: never
+  jpa:
+    open-in-view: false
+
+  flyway:
+    enabled: true
+    schema: springbootemplate
+    baseline-on-migrate: true
+    default-schema: springbootemplate
+
+  web:
+    error:
+      include-stacktrace: never
 
 ---
 
@@ -37,3 +36,20 @@ spring:
 
 server:
   port: 9017
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+server:
+  port: 9027
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test

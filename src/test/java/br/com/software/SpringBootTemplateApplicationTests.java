@@ -1,4 +1,4 @@
-package br.com.wise;
+package br.com.software;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
