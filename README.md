@@ -12,10 +12,10 @@
 
 ## 🚀 Ferramentas Utilizadas
 
-* ☕️ Java 24
+* ☕️ Java 25
 
-* 🟢 Spring Boot 3.5.7
-
+* 🟢 Spring Boot 4.0.3
+  
 <br> 
  
 ## 🖥️ Desenvolvedor
