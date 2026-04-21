@@ -1,8 +1,8 @@
 plugins {
-    java
-    id("jacoco")
-    id("org.springframework.boot") version "4.0.3"
-    id("io.spring.dependency-management") version "1.1.7"
+	java
+	id("jacoco")
+	id("org.springframework.boot") version "4.0.3"
+	id("io.spring.dependency-management") version "1.1.7"
 }
 
 version = "0.0.1"
@@ -10,33 +10,27 @@ group = "br.com.software"
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(25)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
 configurations {
-    compileOnly {
-        extendsFrom(configurations.annotationProcessor.get())
-    }
+	compileOnly {
+		extendsFrom(configurations.annotationProcessor.get())
+	}
 }
 
 tasks.named<Jar>("jar") {
-    enabled = false
+	enabled = false
 }
-
-tasks.named<org.springframework.boot.gradle.tasks.bundling.BootJar>("bootJar") {
-    enabled = true
-    destinationDirectory.set(file("${projectDir}/dist"))
-}
-
 
 configurations.configureEach {
-    exclude(group = "ch.qos.logback", module = "logback-classic")
-    exclude(group = "org.springframework.boot", module = "spring-boot-starter-logging")
+	exclude(group = "ch.qos.logback", module = "logback-classic")
+	exclude(group = "org.springframework.boot", module = "spring-boot-starter-logging")
 }
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
 
 dependencies {
@@ -46,7 +40,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webmvc")
     implementation("org.springframework.boot:spring-boot-starter-flyway")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.boot:spring-boot-starter-webclient")
     implementation("org.springframework.boot:spring-boot-starter-validation")
 
     // MapStruct
@@ -86,8 +79,6 @@ tasks.named<JacocoReport>("jacocoTestReport") {
     dependsOn(tasks.test)
 
     reports {
-        xml.required.set(true)
-        csv.required.set(true)
         html.required.set(true)
     }
 
