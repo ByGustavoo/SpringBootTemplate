@@ -3,11 +3,11 @@ logging:
 
 server:
   servlet:
-    context-path: /SpringBootTemplate
+    context-path: /gRPCServer
 
 spring:
   application:
-    name: springbootemplate
+    name: grpcserver
 
   servlet:
     encoding:
@@ -19,9 +19,7 @@ spring:
 
   flyway:
     enabled: true
-    schema: springbootemplate
     baseline-on-migrate: true
-    default-schema: springbootemplate
 
   web:
     error:

@@ -1,12 +1,12 @@
-package br.com.software;
+package br.com.grpc.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootTemplateApplication {
+public class gRPCServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootTemplateApplication.class, args);
+		SpringApplication.run(gRPCServerApplication.class, args);
 	}
 }
