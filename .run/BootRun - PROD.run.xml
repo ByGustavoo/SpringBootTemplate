@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="BootRun - DEV" type="GradleRunConfiguration" factoryName="Gradle">
+  <configuration default="false" name="BootRun - PROD" type="GradleRunConfiguration" factoryName="Gradle">
     <ExternalSystemSettings>
       <option name="env">
         <map>
@@ -20,7 +20,7 @@
       <option name="taskNames">
         <list>
           <option value="bootRun" />
-          <option value="--args=&quot;--spring.profiles.active=dev&quot;" />
+          <option value="--args=&quot;--spring.profiles.active=prod&quot;" />
         </list>
       </option>
       <option name="vmOptions" />
