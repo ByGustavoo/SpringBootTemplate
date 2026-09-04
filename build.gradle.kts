@@ -1,7 +1,7 @@
 plugins {
     java
     id("jacoco")
-    id("org.springframework.boot") version "4.1.0"
+    id("org.springframework.boot") version "4.1.1"
     id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -46,8 +46,6 @@ dependencies {
     implementation("org.flywaydb:flyway-database-postgresql")
 
     // Logging
-    implementation("org.slf4j:slf4j-api")
-    implementation("org.apache.logging.log4j:log4j-slf4j-impl")
     implementation("org.springframework.boot:spring-boot-starter-log4j2")
 
     // Lombok
@@ -55,12 +53,10 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
 
     // Swagger
-    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.2")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:3.1.0")
 
     // Tests
-    testImplementation("org.mockito:mockito-core:5.12.0")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-    testImplementation("org.mockito:mockito-junit-jupiter:5.12.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.boot:spring-boot-starter-flyway-test")
     testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
